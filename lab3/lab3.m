@@ -33,7 +33,7 @@ imshow(monet_img_his);
 % imshow(monet_img_adpHis);
 
 for i = 1 :5
-    n = 0.05
+    n = 0.05;
     monet_img_adpHis = adapthisteq(monet_img, 'Cliplimit', 0.19 + n);
     figure(8 + i);
     imshow(monet_img_adpHis);
