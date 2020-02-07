@@ -20,7 +20,7 @@ imshow(f_img_y);
 
 [row, col, ~] = size(imgd);
 
-% new_img = ones(row, col);
+new_img = ones(row, col);
 
 % for i = 1 :row
 %    for j = 1 :col
