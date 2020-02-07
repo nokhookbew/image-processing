@@ -20,13 +20,15 @@ imshow(f_img_y);
 
 [row, col, ~] = size(imgd);
 
-new_img = ones(row, col);
+% new_img = ones(row, col);
 
-for i = 1 :row
-    for j = 1 :col
-          new_img(i,j) = sqrt((f_img_x(i, j).^2) + (f_img_y(i, j).^2));
-    end
-end
+% for i = 1 :row
+%    for j = 1 :col
+%        new_img(i,j) = sqrt((f_img_x(i, j).^2) + (f_img_y(i, j).^2));
+%     end
+% end
+new_img = sqrt((f_img_x.^2) + (f_img_y.^2));
+
 new_img_u = uint8(new_img);
 figure(4);
 imshow(new_img_u);
@@ -35,7 +37,7 @@ avg_u = uint8(avg);
 
 avg_u = avg_u-new_img_u;
 figure(5);
-imshow(avgd);
+imshow(avg_u);
 
 
 
