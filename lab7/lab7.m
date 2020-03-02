@@ -17,13 +17,13 @@ title('input                                   output');
 
 img_martian = imread('PIA04521_Martian_Moon.jpg');
 
-h_martian_gaussian = fspecial('gaussian', 3, 0.7);
+h_martian_gaussian = fspecial('gaussian', [13,13], 1.5);
 gaussian_martian = imfilter(img_martian, h_martian_gaussian);
-h_martian_avg = fspecial('average', 25);
+h_martian_avg = fspecial('average', 15);
 avg_martian = imfilter(gaussian_martian, h_martian_avg);
 
 
-result_martian = gaussian_martian + (gaussian_martian - avg_martian)*2;
+result_martian = gaussian_martian + (gaussian_martian - avg_martian)*3;
 
 figure(77);
 imshowpair(img_martian, result_martian, 'montage');
