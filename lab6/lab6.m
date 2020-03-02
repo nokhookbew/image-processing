@@ -16,7 +16,7 @@ N = max(size(imNoisy));
  end
 fftA = fft2(vertical(1:H,1:W));
 figure(3); imshow(log(abs(fftshift(fftA))),[]);
-
+ 
  for y=1:W
      for x=1:W
          u = 0;
